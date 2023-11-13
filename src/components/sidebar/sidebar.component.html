@@ -1,0 +1,110 @@
+<!-- 
+<nav id="sidebar" class="sidebar js-sidebar">
+    <div class="sidebar-content js-simplebar">
+        <a class="sidebar-brand" href="index.html">
+            <span class="align-middle">Warehouse</span>
+        </a>
+
+        <ul class="sidebar-nav">
+            <li class="sidebar-header">
+                Pages
+            </li>
+
+            <li class="sidebar-item active">
+                <a class="sidebar-link" routerLink="/">
+                    <i class="fas fa-sliders-h align-middle"></i> <span class="align-middle">Dashboard</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" routerLink="/inventory">
+                    <i class="fas fa-user align-middle"></i> <span class="align-middle">Inventory</span>
+                </a>
+            </li>
+
+            
+            <li class="sidebar-item">
+                <a class="sidebar-link" routerLink="/employees">
+                    <i class="fas fa-sign-in align-middle"></i> <span class="align-middle">Employees</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" routerLink="/suppliers">
+                    <i class="fas fa-user-plus align-middle"></i> <span class="align-middle">Suppliers</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" routerLink="/">
+                    <i class="fas fa-users align-middle"></i> <span class="align-middle">Vendors</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" routerLink="/products">
+                    <i class="fas fa-shopping-bag align-middle"></i> <span class="align-middle">Products</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<router-outlet></router-outlet> -->
+
+<div class="wrapper">
+    <nav id="sidebar" class="sidebar js-sidebar">
+      <div class="sidebar-content js-simplebar">
+        <a class="sidebar-brand" href="index.html">
+          <span class="align-middle">Warehouse</span>
+        </a>
+        <ul class="sidebar-nav">
+          <li class="sidebar-header">
+            Pages
+          </li>
+          <li class="sidebar-item active">
+            <a class="sidebar-link" routerLink="/">
+              <i class="fas fa-sliders-h align-middle"></i> <span class="align-middle">Dashboard</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="/inventory">
+              <i class="fas fa-user align-middle"></i> <span class="align-middle">Inventory</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="/employees">
+              <i class="fas fa-sign-in align-middle"></i> <span class="align-middle">Employees</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="/suppliers">
+              <i class="fas fa-user-plus align-middle"></i> <span class="align-middle">Suppliers</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="/">
+              <i class="fas fa-users align-middle"></i> <span class="align-middle">Vendors</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="/products">
+              <i class="fas fa-shopping-bag align-middle"></i> <span class="align-middle">Products</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="/orders">
+              <i class="fas fa-shopping-bag align-middle"></i> <span class="align-middle">Orders</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="main">
+      <app-topbar></app-topbar>
+      <main class="content">
+        <div class="container-fluid p-0">
+          <router-outlet></router-outlet>
+        </div>
+      </main>
+    </div>
+  </div>

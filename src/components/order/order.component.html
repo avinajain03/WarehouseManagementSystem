@@ -1,0 +1,61 @@
+<p>order works!</p>
+
+<div class="example-container mat-elevation-z8">
+    <mat-table [dataSource]="vendorOrders" matSort>
+
+        <ng-container matColumnDef="vendorOrderId">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Order Id</mat-header-cell>
+            <mat-cell *matCellDef="let order">{{ order.vendorOrderId }}</mat-cell>
+         </ng-container>
+  
+      <!-- Product Id Column -->
+      <ng-container matColumnDef="productId">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Product Id</mat-header-cell>
+        <mat-cell *matCellDef="let order">{{ order.productId }}</mat-cell>
+      </ng-container>
+  
+      <!-- Product Name Column -->
+      <ng-container matColumnDef="productName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Product Name</mat-header-cell>
+        <mat-cell *matCellDef="let order">{{ order.productName }}</mat-cell>
+      </ng-container>
+  
+      <!-- Supplier Name Column -->
+      <ng-container matColumnDef="supplierName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Supplier Name</mat-header-cell>
+        <mat-cell *matCellDef="let order">{{ order.supplierName }}</mat-cell>
+      </ng-container>
+
+      <!-- Price Column -->
+      <ng-container matColumnDef="price">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Price</mat-header-cell>
+        <mat-cell *matCellDef="let order">{{ order.price }}</mat-cell>
+      </ng-container>
+  
+      <!-- Product Quantity Column -->
+      <ng-container matColumnDef="productQuantity">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Quantity</mat-header-cell>
+        <mat-cell *matCellDef="let order">{{ order.productQuantity }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let order">
+          <button mat-button color="warn" (click)="deleteOrder(order.vendorOrderId)">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-cell>
+    </ng-container>
+
+    
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+  
+    <mat-paginator [pageSize]="pageSize" [pageIndex]="currentPage"
+                [pageSizeOptions]="pageSizeOptions" [length]="totalRecords"
+                (page)="onPageChange($event)">
+    </mat-paginator>
+  </div>

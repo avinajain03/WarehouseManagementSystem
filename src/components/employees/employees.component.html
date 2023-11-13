@@ -1,0 +1,39 @@
+
+<div class="mat-elevation-z8">
+    <button mat-raised-button color="primary" (click)="openDialog()">Add Staff</button>
+    <mat-table [dataSource]="employeesDisplayed" matSort>
+
+        <ng-container matColumnDef="userId">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> User ID </mat-header-cell>
+            <mat-cell *matCellDef="let employee"> {{ employee.userId }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="userName">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> User Name </mat-header-cell>
+            <mat-cell *matCellDef="let employee"> {{ employee.userName }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+            <mat-cell *matCellDef="let employee"> {{ employee.email }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="password">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Password</mat-header-cell>
+            <mat-cell *matCellDef="let employee"> {{ employee.password }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="contact">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Contact </mat-header-cell>
+            <mat-cell *matCellDef="let employee"> {{ employee.contact }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="role">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Role </mat-header-cell>
+            <mat-cell *matCellDef="let employee"> {{ employee.role }} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>
